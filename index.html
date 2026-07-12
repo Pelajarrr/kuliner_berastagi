@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+===========================================================
+Website : Kuliner Halal Berastagi
+File    : index.html
+Fungsi  : Halaman utama website
+===========================================================
+-->
+
+<html lang="id">
+
+<head>
+
+    <!-- Pengaturan karakter -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive di HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul Website -->
+    <title>Kuliner Halal Berastagi</title>
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="overlay">
+
+            <h1>
+                🍜 Kuliner Halal Berastagi
+            </h1>
+
+            <p>
+                Temukan tempat makan halal terbaik
+                di Berastagi dengan mudah.
+            </p>
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari tempat kuliner...">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= LIST ================= -->
+
+    <section class="container">
+
+        <h2>
+            Rekomendasi Tempat Kuliner
+        </h2>
+
+        <!--
+        Seluruh daftar tempat makan
+        akan dibuat otomatis menggunakan JavaScript.
+        -->
+
+        <div id="restaurantList"
+            class="restaurant-list">
+
+        </div>
+
+    </section>
+
+    <!-- ================= MODAL ================= -->
+
+    <!--
+    Modal digunakan untuk
+    menampilkan detail tempat
+    ketika card diklik.
+    -->
+
+    <div
+        id="detailModal"
+        class="modal">
+
+        <div class="modal-content">
+
+            <!-- Tombol Close -->
+            <span
+                class="close"
+                id="closeModal">
+                &times;
+            </span>
+
+            <!-- Foto -->
+            <img
+                id="modalImage"
+                src=""
+                alt="">
+
+            <!-- Nama -->
+            <h2 id="modalTitle"></h2>
+
+            <div class="info">
+                
+                <!-- Label Halal -->
+                <div class="badge" style="margin-top: 0; margin-bottom: 20px;">🕌 Halal</div>
+
+                <!-- Alamat -->
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Alamat :
+                    <span id="modalAddress"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Database -->
+    <script src="data.js"></script>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
